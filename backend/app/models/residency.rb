@@ -3,6 +3,7 @@ class Residency < ApplicationRecord
 
   has_many :reviews, foreign_key: 'user_id', dependent: :destroy
 
+  validates :name, presence: true
   validates :location, presence: true
   validates :category, presence: true
   validates :description, presence: true
