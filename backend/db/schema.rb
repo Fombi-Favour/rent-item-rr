@@ -28,6 +28,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_02_001720) do
   end
 
   create_table "residencies", force: :cascade do |t|
+    t.string "name"
     t.string "location"
     t.string "category"
     t.text "description"
