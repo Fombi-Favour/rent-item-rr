@@ -6,6 +6,10 @@ class Api::V1::ResidenciesController < ApplicationController
     render json: @residencies
   end
 
+  def show
+    render json: @residency
+  end
+
   def create
     @residency = Residency.new(residency_params)
     if @residency.save
@@ -35,6 +39,6 @@ class Api::V1::ResidenciesController < ApplicationController
   end
 
   def residency_params
-    params.require(:residency).permit(:name, :location, :category, :description, :price)
+    params.require(:residency).permit(:name, :location, :category, :photo, :description, :price)
   end
 end
