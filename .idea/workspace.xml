@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="23100768-26c4-4d23-b639-2af388f7de7d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/backend/app/controllers/api/v1/residencies_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/controllers/api/v1/residencies_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/models/booking.rb" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/models/booking.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app/models/residency.rb" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app/models/residency.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/db/migrate/20240302001432_create_residencies.rb" beforeDir="false" afterPath="$PROJECT_DIR$/backend/db/migrate/20240302001432_create_residencies.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/db/schema.rb" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2dbqevfCiS2s7hX6IsxL1hSoYmH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "crud-feature",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "C:\\Users\\fombi\\Documents\\clones\\rent-item-rr\\frontend\\node_modules\\stylelint",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ruby.rails.projectView.checked": "true",
+    "ruby.structure.view.model.defaults.configured": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="false" RAKE_SPRING_PRE_LOADER_OPTION="false" RAILS_SPRING_PRE_LOADER_OPTION="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="23100768-26c4-4d23-b639-2af388f7de7d" name="Changes" comment="" />
+      <created>1710287287321</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1710287287321</updated>
+      <workItem from="1710287307455" duration="2728000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
