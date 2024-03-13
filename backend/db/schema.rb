@@ -31,6 +31,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_02_001720) do
     t.string "name"
     t.string "location"
     t.string "category"
+    t.string "photo"
     t.text "description"
     t.integer "price"
     t.bigint "user_id"
