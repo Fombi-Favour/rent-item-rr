@@ -4,6 +4,7 @@ class CreateResidencies < ActiveRecord::Migration[7.1]
       t.string :name
       t.string :location
       t.string :category
+      t.string :photo
       t.text :description
       t.integer :price
       t.references :user, foreign_key: { to_table: :users }
