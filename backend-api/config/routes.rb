@@ -10,4 +10,8 @@ Rails.application.routes.draw do
 
   post '/login', to: 'user_session#create'
   post '/signup', to: 'user_register#create'
+
+  namespace :api do
+    resources :residencies
+  end
 end
