@@ -24,7 +24,7 @@ class Api::ResidenciesController < ApplicationController
 
   def destroy
     @residency = Residency.find(params[:id])
-    
+
     if @residency.destroy
       head :no_content
     else
