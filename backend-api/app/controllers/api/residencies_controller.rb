@@ -1,31 +1,32 @@
 class Api::ResidenciesController < ApplicationController
-  before_action :authenticate_token!, only: %i[index show create destroy]
+  before_action :authenticate_token!
 
   def index
     @residencies = Residency.all
-    residencies_data = @residencies.map do |residency|
-      {
-        id: residency.id,
-        name: residency.name,
-        image: residency.image,
-        description: residency.description,
-        location: residency.location,
-        price: residency.price,
-        category: residency.category
-      }
-    end
 
-    if @residencies.present?
-      render json: { data: residencies_data, message: 'Residencies lists' }, status: :ok
-    else
-      render json: { error: 'No residencies found' }, status: :not_found
-    end
+    render json: @residencies.map { |residency| residency.attributes.except('user_id', 'created_at', 'updated_at') }
+  end
+
+  def show
+    @residency = Residency.find(params[:id])
+
+    render json: @residency.attributes.except('user_id', 'created_at', 'updated_at')
   end
 
   def create
-    @residency = Residency.new(residency_params)
+    @residency = current_user.residencies.build(residency_params)
     if @residency.save
-      render json: { data: @residency, message: 'residency created successfully' }, status:  :created
+      render json: @residency, status:  :created
+    else
+      render json: @residency.errors, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @residency = Residency.find(params[:id])
+    
+    if @residency.destroy
+      head :no_content
     else
       render json: @residency.errors, status: :unprocessable_entity
     end
@@ -34,6 +35,6 @@ class Api::ResidenciesController < ApplicationController
   private
 
   def residency_params
-    params.require(:residency).permit(:name, :image, :description, :location, :price, :category)
+    params.permit(:name, :image, :description, :location, :price, :category)
   end
 end
