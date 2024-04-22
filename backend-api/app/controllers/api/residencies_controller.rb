@@ -26,7 +26,9 @@ class Api::ResidenciesController < ApplicationController
     @residency = Residency.find(params[:id])
 
     if @residency.destroy
-      head :no_content
+      @residency.reservations.destroy_all
+      @residency.reviews.destroy_all
+      render json: { message: 'Residency successfully deleted' }
     else
       render json: @residency.errors, status: :unprocessable_entity
     end
