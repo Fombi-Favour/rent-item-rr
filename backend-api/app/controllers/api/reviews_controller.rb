@@ -2,8 +2,7 @@ class Api::ReviewsController < ApplicationController
   before_action :authenticate_token!
 
   def index
-    @residency = Residency.find(params[:residency_id])
-    @reviews = @residency.reviews.includes(:residency)
+    @reviews = current_user.reviews.includes(:residency)
 
     render json: @reviews.map { |review| review.attributes.except('created_at', 'updated_at') }
   end
