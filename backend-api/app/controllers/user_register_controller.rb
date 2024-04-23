@@ -3,7 +3,7 @@ class UserRegisterController < ApplicationController
 
   def create
     if user_exists?(sign_up_params[:email])
-      render json:  { error: 'email already exists' }, status: :unprocessable_entity
+      render json: { error: 'email already exists' }, status: :unprocessable_entity
     else
       user = User.new(sign_up_params)
       if user.save

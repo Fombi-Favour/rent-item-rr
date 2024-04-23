@@ -8,7 +8,7 @@ class Api::ReviewsController < ApplicationController
   end
 
   def create
-    residency = Residency.find(params[:residency_id])
+    Residency.find(params[:residency_id])
 
     @review = current_user.reviews.build(reviews_params)
 

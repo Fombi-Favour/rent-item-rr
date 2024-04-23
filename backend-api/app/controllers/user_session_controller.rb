@@ -10,7 +10,7 @@ class UserSessionController < ApplicationController
       }, status: :ok
     else
       render json: {
-        error: "Invalid email or password"
+        error: 'Invalid email or password'
       }, status: :unauthorized
     end
   end

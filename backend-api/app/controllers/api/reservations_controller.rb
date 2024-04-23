@@ -14,7 +14,7 @@ class Api::ReservationsController < ApplicationController
   end
 
   def create
-    residency = Residency.find(params[:residency_id])
+    Residency.find(params[:residency_id])
 
     @reservation = current_user.reservations.build(reservation_params)
 
@@ -37,6 +37,7 @@ class Api::ReservationsController < ApplicationController
   private
 
   def reservation_params
-    params.permit(:check_in_date, :check_out_date, :guest_number, :residency_id, destination_attributes: %i[name location])
+    params.permit(:check_in_date, :check_out_date, :guest_number, :residency_id,
+                  destination_attributes: %i[name location])
   end
 end

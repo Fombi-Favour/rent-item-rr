@@ -16,7 +16,7 @@ class Api::ResidenciesController < ApplicationController
   def create
     @residency = current_user.residencies.build(residency_params)
     if @residency.save
-      render json: @residency, status:  :created
+      render json: @residency, status: :created
     else
       render json: @residency.errors, status: :unprocessable_entity
     end
