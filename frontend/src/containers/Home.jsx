@@ -68,10 +68,10 @@ const Home = () => (
     <div>
       <div className="flex flex-col items-center p-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration="2000">
         <span className="text-gray-500 uppercase font-semibold text-sm md:text-base">
-          simple and fast way to rent
+          people are already enjoying the service
         </span>
         <p className="tracking-wider text-lg md:text-2xl font-medium">
-          Comfortable home from reliable people
+          Look what these have to say
         </p>
       </div>
       <FeedbackList />
