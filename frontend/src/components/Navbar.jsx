@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Logo from '../assets/logo.jpg';
-// import { NavLink, useNavigate } from 'react-router-dom';
-// import clsx from 'clsx';
 
 const Navbar = () => {
   const [toggleDropdown, setToggleDropdown] = useState(false);
