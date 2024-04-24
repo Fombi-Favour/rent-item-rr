@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import VideoBg from '../assets/vid.mp4';
 import Land1 from '../assets/land-1.jpg';
 import Navbar from '../components/Navbar';
+import Logo from '../assets/logo.jpg';
 
 import 'aos/dist/aos.css';
 import FeedbackList from '../components/FeedbackList';
@@ -75,6 +76,13 @@ const Home = () => (
       </div>
       <FeedbackList />
     </div>
+    {/* footer */}
+    <footer className="flex flex-col items-center gap-1 py-3 mt-3 bg-[#d4e2fc]">
+      <img src={Logo} alt="logo" className="w-[3.15rem] md:w-12 rounded-lg" />
+      <span className="text-lg font-medium tracking-wide">
+        HoliStay 2024. All rights reserved
+      </span>
+    </footer>
   </div>
 );
 
