@@ -29,6 +29,9 @@ module.exports = {
           '100%': { transform: 'translateX(-100%)' },
         },
       },
+      backgroundImage: {
+        'img-auth': "url('./assets/login.jpg')",
+      },
     },
   },
   plugins: [],
