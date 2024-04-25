@@ -48,7 +48,7 @@ const Navbar = () => {
               </Link>
 
               <Link
-                to="login"
+                to="sign-up"
                 className="block px-4 py-2 text-sm bg-slate-700/50 mx-2 rounded-xl"
               >
                 Sign Up
