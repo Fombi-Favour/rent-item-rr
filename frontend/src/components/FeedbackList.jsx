@@ -3,8 +3,8 @@ import { FaStar } from 'react-icons/fa';
 import feedback from '../utils/feedback';
 
 const FeedbackList = () => (
-  <div className="relative flex overflow-x-hidden">
-    <div className="pb-6 px-5 inline-flex gap-6 animate-horizontal-scroll">
+  <div className="relative flex pb-6 px-5 overflow-x-hidden">
+    <div className="inline-flex gap-6 animate-horizontal-scroll">
       {feedback.map((item) => {
         const stars = [];
         for (let i = 0; i < 5; i += 1) {
