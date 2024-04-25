@@ -1,10 +1,10 @@
 import React from 'react';
 import { Outlet } from 'react-router';
-import DashNavbar from './DashNavbar';
+import Sidebar from './Sidebar';
 
 const Layout = () => (
   <div className="md:flex">
-    <DashNavbar />
+    <Sidebar />
     <div className="w-10/12">
       <Outlet />
     </div>
