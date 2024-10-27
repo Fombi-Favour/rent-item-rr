@@ -21,7 +21,7 @@ module.exports = {
 
     extend: {
       animation: {
-        'horizontal-scroll': 'scroll 120s linear infinite',
+        'horizontal-scroll': 'scroll 100s infinite',
       },
       keyframes: {
         scroll: {

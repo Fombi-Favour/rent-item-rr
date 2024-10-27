@@ -18,14 +18,14 @@ const feedback = [
     userName: 'Morgan Abrams',
     image: 'https://images.pexels.com/photos/10276340/pexels-photo-10276340.jpeg?auto=compress&cs=tinysrgb&w=600',
     text: 'HoliStay is an excellent platform. I was able to find an available place to spend my vacation. The services are the best.',
-    rating: 4,
+    rating: 3,
   },
   {
     id: 4,
     userName: 'David Anderson',
     image: 'https://images.pexels.com/photos/10276340/pexels-photo-10276340.jpeg?auto=compress&cs=tinysrgb&w=600',
     text: 'HoliStay is an excellent platform. I was able to find an available place to spend my vacation. The services are the best.',
-    rating: 4,
+    rating: 5,
   },
   {
     id: 5,

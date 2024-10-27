@@ -16,13 +16,13 @@ const Navbar = () => {
 
       {/* Desktop navigation */}
       <div className="sm:flex hidden">
-        <div className="flex gap-3 md:gap-5">
+        <div className="flex items-center gap-3 md:gap-5">
           <Link to="login" className="uppercase tracking-wide text-[18px] font-medium">
             sign in
           </Link>
           <Link
             to="sign-up"
-            className="uppercase tracking-wide text-[18px] font-medium bg-slate-400/50 px-3 rounded-lg"
+            className="uppercase tracking-wide text-[18px] font-medium bg-slate-400/50 px-3 py-2 rounded-lg"
           >
             sign up
           </Link>

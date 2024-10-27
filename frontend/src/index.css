@@ -9,3 +9,17 @@
   padding: 0;
   font-family: "Poppins", sans-serif;
 }
+
+.main-bg {
+  background: rgb(255, 215, 53);
+  background: linear-gradient(37deg, rgba(255, 215, 53, 0.19091386554621848) 0%, rgba(204, 255, 91, 0.227328431372549) 28%, rgba(63, 247, 134, 0.19931722689075626) 58%, rgba(56, 192, 252, 0.24413515406162467) 85%);
+}
+
+.main-layout {
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.main-layout::-webkit-scrollbar{
+  display: none;
+}

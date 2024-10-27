@@ -10,6 +10,7 @@ import AddResidency from './containers/residency/AddResidency';
 import ResidencyDetails from './containers/residency/ResidencyDetails';
 import DeleteResidency from './containers/residency/DeleteResidency';
 import AddReservation from './containers/reservation/AddReservation';
+import UpdateReservation from './containers/reservation/UpdateReservation';
 import Layout from './components/Layout';
 
 import 'slick-carousel/slick/slick.css';
@@ -33,6 +34,7 @@ function App() {
         <Route path="reservation" element={<Layout />}>
           <Route index element={<Reservation />} />
           <Route path="new" element={<AddReservation />} />
+          <Route path="edit/:reservationId" element={<UpdateReservation />} />
         </Route>
       </Routes>
       <ToastContainer />

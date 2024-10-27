@@ -7,7 +7,7 @@ const Login = () => (
       <div className="flex flex-col gap-3">
         <h2 className="text-2xl md:text-4xl text-center font-medium">Sign In</h2>
         <span className="text-[lg] text-center font-light tracking-wide">
-          Welcome back! Sign in and rent for your vacations
+          Welcome back! Sign in and rent your vacations
         </span>
         <form className="mt-4 flex flex-col items-center gap-5">
           <input

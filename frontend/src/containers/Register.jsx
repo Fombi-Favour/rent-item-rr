@@ -14,7 +14,7 @@ const Register = () => {
         <div className="flex flex-col gap-3">
           <h2 className="text-2xl md:text-4xl text-center font-medium">Sign Up</h2>
           <span className="text-[lg] text-center font-light tracking-wide">
-            👋 Hello there! Sign up and rent for your vacations
+            👋 Hello there! Sign up and rent your vacations
           </span>
           <form className="mt-4 flex flex-col items-center gap-5">
             {/* username */}
@@ -41,10 +41,12 @@ const Register = () => {
                 required
               />
               {image ? (
-                <div className="flex items-center px-4">
-                  <span className="text-[15px]">{fileName}</span>
+                <div className="flex items-center justify-between w-full px-4">
+                  <span className="text-[15px]">
+                    {fileName.length >= 20 ? fileName.slice(0, 15) : fileName}
+                  </span>
                   <MdDelete
-                    className="text-orange-400 ml-32 cursor-pointer"
+                    className="text-orange-400 cursor-pointer"
                     size={25}
                     onClick={() => {
                       setFileName('Upload your profile photo');

@@ -1,10 +1,15 @@
 import React from 'react';
 import { Outlet } from 'react-router';
+import Sidebar from './Sidebar';
 
 const Layout = () => (
-  <div>
-    Layout
-    <Outlet />
+  <div className="md:flex">
+    <div className="">
+      <Sidebar />
+    </div>
+    <div className="w-10/12 main-layout">
+      <Outlet />
+    </div>
   </div>
 );
 
