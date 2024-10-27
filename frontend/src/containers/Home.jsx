@@ -21,7 +21,7 @@ const Home = () => (
       <header className="absolute top-0 text-white w-full h-full">
         <Navbar />
         <div className="flex flex-col gap-4 px-5 md:px-9 mt-48" data-aos="fade-up" data-aos-delay="500" data-aos-duration="2500">
-          <h2 className="font-bold text-4xl">
+          <h2 className="font-bold text-4xl md:text-5xl">
             Find housing
             <br />
             anywhere
@@ -30,7 +30,7 @@ const Home = () => (
             The offers for you at any point of your journey. Wherever you are,
             feel yourself like your own home.
           </span>
-          <Link to="sign-up" className="hover:bg-orange-600 hover:border-none border-2 border-orange-600 transition duration-700 w-fit py-2 px-6 rounded-xl uppercase font-semibold tracking-wide">
+          <Link to="sign-up" className="hover:bg-orange-600 hover:border-none border-2 border-orange-600 transition duration-700 w-fit py-2 px-6 rounded-2xl uppercase font-semibold tracking-wide">
             start free
           </Link>
         </div>
@@ -47,7 +47,7 @@ const Home = () => (
     </div>
     {/* section 3 */}
     <div className="bg-[#dfebff] flex flex-col md:flex-row md:items-center gap-12 p-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration="2000">
-      <div className="shadow-xl">
+      <div className="shadow-xl rounded-2xl">
         <img src={Land1} alt="land" className="w-[45rem] md:w-[60rem] rounded-2xl" />
       </div>
       <div className="flex flex-col gap-2">
@@ -59,7 +59,7 @@ const Home = () => (
           and checked managers. We will find best place for you and the conditions
           for a safe transactions and comfortable stay.
         </span>
-        <Link to="sign-up" className="hover:bg-orange-600 hover:border-none hover:text-white text-gray-600 border-2 border-orange-600 transition duration-700 w-fit py-2 px-6 rounded-xl uppercase font-semibold tracking-wide">
+        <Link to="sign-up" className="hover:bg-orange-600 hover:border-none hover:text-white text-gray-600 border-2 border-orange-600 transition duration-700 w-fit py-2 px-6 mt-2 rounded-xl uppercase font-semibold tracking-wide">
           start free
         </Link>
       </div>

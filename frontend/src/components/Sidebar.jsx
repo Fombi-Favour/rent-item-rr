@@ -9,11 +9,13 @@ const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-white md:h-screen md:border-r-2 md:w-64 lg:w-68">
-      <div className="flex flex-col">
+    <div className="main-bg md:h-screen md:border-r-2 md:w-64 lg:w-68">
+      <div className="flex flex-col shadow-lg md:shadow-none">
         {/* logo */}
         <div className="p-3 flex items-center justify-between">
-          <img src={Logo} alt="logo" className="w-20 md:w-48 rounded-xl shadow-md" />
+          <NavLink to="/">
+            <img src={Logo} alt="logo" className="w-20 md:w-48 rounded-xl shadow-md" />
+          </NavLink>
           <FaBars
             onClick={() => setIsOpen(true)}
             className="text-2xl md:hidden"
@@ -43,7 +45,7 @@ const Sidebar = () => {
         <div className={clsx(' fixed h-full w-screen lg:hidden z-50 bg-black/50 backdrop-blur-sm top-0 right-0 -translate-x-full transition-all duration-700',
           isOpen && 'delay-200 translate-x-0')}
         >
-          <div className="bg-slate-200 h-screen flex flex-col z-50 pt-10 px-5">
+          <div className="main-bg h-screen flex flex-col z-50 pt-10 px-5">
             <div className="flex justify-end pb-5">
               <FaTimes onClick={() => setIsOpen(false)} className="text-3xl" />
             </div>
@@ -58,6 +60,14 @@ const Sidebar = () => {
                 {menu.name}
               </NavLink>
             ))}
+            <button
+              type="button"
+              className="bg-red-500 w-fit px-8 rounded-lg mt-3 ml-6"
+            >
+              <span className="uppercase font-semibold text-lg text-white tracking-wider">
+                logout
+              </span>
+            </button>
           </div>
         </div>
 

@@ -4,7 +4,9 @@ import Sidebar from './Sidebar';
 
 const Layout = () => (
   <div className="md:flex">
-    <Sidebar />
+    <div className="">
+      <Sidebar />
+    </div>
     <div className="w-10/12">
       <Outlet />
     </div>

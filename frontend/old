@@ -1,0 +1,13 @@
+{/* eslint-disable-next-line react/jsx-props-no-spreading */}
+<Slider {...settings} className="w-[20rem] md:w-[30rem] lg:w-[65rem]">
+  {residenceData.map((item) => (
+    <Link to={`${item.id}`} key={item.id}>
+      <Residence
+        name={item.name}
+        image={item.image}
+        location={item.location}
+        price={item.price}
+      />
+    </Link>
+  ))}
+</Slider>
