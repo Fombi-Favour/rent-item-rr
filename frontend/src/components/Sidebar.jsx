@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import clsx from 'clsx';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaUser } from 'react-icons/fa';
 import navMenu from '../utils/nav-menu';
 import Logo from '../assets/logo.jpg';
 
@@ -12,10 +12,14 @@ const Sidebar = () => {
     <div className="main-bg md:h-screen md:border-r-2 md:w-64 lg:w-68">
       <div className="flex flex-col shadow-lg md:shadow-none">
         {/* logo */}
-        <div className="p-3 flex items-center justify-between">
+        <div className="p-3 flex md:flex-col items-center justify-between">
           <NavLink to="/">
             <img src={Logo} alt="logo" className="w-20 md:w-48 rounded-xl shadow-md" />
           </NavLink>
+          <div className="flex items-center gap-2 md:mt-7 md:-mb-9">
+            <FaUser className="text-4xl text-gray-400 border-2 rounded-full border-black p-1" />
+            <span>username</span>
+          </div>
           <FaBars
             onClick={() => setIsOpen(true)}
             className="text-2xl md:hidden"

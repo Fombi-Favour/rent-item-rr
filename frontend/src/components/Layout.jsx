@@ -7,7 +7,7 @@ const Layout = () => (
     <div className="">
       <Sidebar />
     </div>
-    <div className="w-10/12 main-layout">
+    <div className="w-full md:w-10/12 main-layout">
       <Outlet />
     </div>
   </div>
