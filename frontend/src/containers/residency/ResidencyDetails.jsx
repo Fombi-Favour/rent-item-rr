@@ -13,7 +13,7 @@ const ResidencyDetails = () => {
 
   return (
     <div className="w-screen md:w-full">
-      <div className=" pt-5 pb-3 px-3">
+      <div className="pt-5 pb-3 px-3">
         <Link to="/residency" className="text-white text-2xl border w-fit flex items-center p-2 rounded-full bg-orange-500 shadow-md">
           <FaArrowLeft />
         </Link>
@@ -42,10 +42,6 @@ const ResidencyDetails = () => {
                   <FaLocationArrow />
                   <span className="text-gray-800">{residence.location}</span>
                 </p>
-              </div>
-              {/* map */}
-              <div>
-                <map name="columbia" />
               </div>
             </div>
           </div>
