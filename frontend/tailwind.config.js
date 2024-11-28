@@ -31,6 +31,7 @@ module.exports = {
       },
       backgroundImage: {
         'img-auth': "url('./assets/login.jpg')",
+        'img-feedback': "url('./assets/land-1.jpg')",
       },
     },
   },
