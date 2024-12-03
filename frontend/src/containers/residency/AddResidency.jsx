@@ -79,10 +79,10 @@ const AddResidency = () => {
                 className="w-1/2 h-9 border-2 border-orange-400 bg-white/20 outline-none rounded-2xl px-3 placeholder:text-slate-700"
               >
                 <option value="#">Category</option>
-                <option value="1">Hotel</option>
+                <option value="0">Hotel</option>
                 <option value="1">Motel</option>
-                <option value="1">Beach</option>
-                <option value="1">Resort</option>
+                <option value="2">Beach</option>
+                <option value="3">Resort</option>
               </select>
               <input
                 type="number"
