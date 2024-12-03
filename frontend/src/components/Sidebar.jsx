@@ -16,9 +16,9 @@ const Sidebar = () => {
           <NavLink to="/">
             <img src={Logo} alt="logo" className="w-20 md:w-48 rounded-xl shadow-md" />
           </NavLink>
-          <div className="flex items-center gap-2 md:mt-7 md:-mb-9">
-            <FaUser className="text-4xl text-gray-400 border-2 rounded-full border-black p-1" />
-            <span>username</span>
+          <div className="flex items-center gap-2 md:mt-7 md:-mb-9 shadow-sm shadow-black/20 p-1 rounded-lg">
+            <FaUser className="text-4xl text-white bg-orange-400 border-2 rounded-full border-transparent p-1" />
+            <span className="font-semibold tracking-wide">username</span>
           </div>
           <FaBars
             onClick={() => setIsOpen(true)}
