@@ -4,7 +4,6 @@ class CreateReviews < ActiveRecord::Migration[7.1]
       t.decimal :rating
       t.string :comment_text
       t.references :user, foreign_key: true
-      t.references :residency, foreign_key: true
 
       t.timestamps
     end
