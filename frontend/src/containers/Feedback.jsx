@@ -20,7 +20,7 @@ const Feedback = () => (
         </h2>
         <img src={FeedBack} alt="feedback" className="hidden md:block" />
       </div>
-      {/* main form */}
+      {/* feedback form */}
       <Ratings />
     </section>
   </div>
