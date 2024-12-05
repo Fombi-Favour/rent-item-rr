@@ -1,5 +1,5 @@
-/* eslint-disable max-len */
 /* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable max-len */
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
