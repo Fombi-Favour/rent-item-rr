@@ -51,7 +51,6 @@ const DeleteModal = () => {
           variant="outlined"
           onClick={handleClickOpen}
           sx={buttonStyle}
-          className="flex items-center justify-center gap-3 bg-[#f70505] w-28 h-8 rounded-lg text-white text-lg"
         >
           <FaTrashAlt />
           Delete
