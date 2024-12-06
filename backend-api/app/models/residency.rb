@@ -1,6 +1,6 @@
 class Residency < ApplicationRecord
   has_many :reservations, dependent: :destroy
-  has_many :reviews, dependent: :destroy
+  has_many :residency_reviews, dependent: :destroy
 
   belongs_to :user
 
