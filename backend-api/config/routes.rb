@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   post '/signup', to: 'user_register#create'
 
   namespace :api do
-    resources :residencies
+    resources :residencies do
+      resources :residency_review
+    end
     resources :reservations
     resources :reviews
   end
