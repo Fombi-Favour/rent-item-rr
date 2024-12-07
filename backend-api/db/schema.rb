@@ -18,6 +18,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_06_023003) do
     t.date "check_in_date"
     t.date "check_out_date"
     t.integer "guest_number"
+    t.decimal "total_price"
     t.bigint "user_id"
     t.bigint "residency_id"
     t.datetime "created_at", null: false
@@ -62,6 +63,7 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_06_023003) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
+    t.string "image_url"
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
