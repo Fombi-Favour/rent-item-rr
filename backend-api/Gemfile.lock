@@ -169,10 +169,7 @@ GEM
     parser (3.3.5.0)
       ast (~> 2.4.1)
       racc
-<<<<<<< Updated upstream
-=======
     pg (1.5.9)
->>>>>>> Stashed changes
     pg (1.5.9-x64-mingw-ucrt)
     psych (5.1.2)
       stringio
