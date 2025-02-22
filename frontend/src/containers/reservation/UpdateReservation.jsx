@@ -18,6 +18,12 @@ const UpdateReservation = () => {
   const reservation = reservationData.find((item) => item.id === parseInt(reservationId, 10));
   const specificResidence = residenceData.find((residence) => residence.id === reservation.residence_id);
 
+  // const handleResidencyChange = (e) => {
+  //   let residencyName = specificResidence.name;
+  //   residencyName = e.target.value;
+  //   setResName(residencyName);
+  // };
+
   return (
     <div className="main-bg w-screen h-[89vh] md:h-screen md:w-full">
       <div className="h-full flex items-center justify-center">
@@ -28,8 +34,8 @@ const UpdateReservation = () => {
           <form className="mt-3 flex flex-col items-center gap-5 mx-3">
             {/* residence */}
             <select
-              id=""
               value={specificResidence.name}
+              // onChange={handleResidencyChange}
               className="w-full h-9 border-2 border-orange-400 bg-white/20 outline-none rounded-2xl px-3 placeholder:text-slate-700"
             >
               <option value="#">Residence Name</option>
@@ -46,7 +52,6 @@ const UpdateReservation = () => {
                   type="date"
                   value={reservation.check_in_date}
                   className="h-9 border-2 border-orange-400 bg-white/20 outline-none rounded-2xl px-3 placeholder:text-slate-700"
-                  required
                 />
               </div>
               {/* check-out date */}
@@ -56,7 +61,6 @@ const UpdateReservation = () => {
                   type="date"
                   value={reservation.check_out_date}
                   className="h-9 border-2 border-orange-400 bg-white/20 outline-none rounded-2xl px-3 placeholder:text-slate-700"
-                  required
                 />
               </div>
             </div>
@@ -70,7 +74,6 @@ const UpdateReservation = () => {
                 value={reservation.guest_number}
                 placeholder="Number of guest"
                 className="w-1/2 h-9 border-2 border-orange-400 bg-white/20 outline-none rounded-2xl px-3 placeholder:text-slate-700"
-                required
               />
               {/* total price (disabled) */}
               <input
@@ -79,13 +82,11 @@ const UpdateReservation = () => {
                 disabled
                 value={reservation.price}
                 className="w-1/2 h-9 border-2 border-orange-400 bg-white/20 outline-none rounded-2xl px-3 placeholder:text-slate-700"
-                required
               />
             </div>
             <button
               type="submit"
               className="bg-orange-400 w-fit px-9 py-2 rounded-xl text-white tracking-wide shadow-md hover:shadow-lg"
-              required
             >
               Update
             </button>

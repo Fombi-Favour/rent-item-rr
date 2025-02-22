@@ -1,12 +1,27 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { MdCloudUpload, MdDelete } from 'react-icons/md';
+import { toast } from 'react-toastify';
 
 const Register = () => {
+  const navigate = useNavigate();
+
+  const [name, setName] = useState('');
   const [image, setImage] = useState(null);
   const [fileName, setFileName] = useState('No selected file');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSignup = (e) => {
+    e.preventDefault();
+
+    if (name.length !== 0 && image !== '' && email.length !== 0 && password.length !== 0) {
+      navigate('/residency');
+      toast.success(`Hello ${name}`);
+    } else {
+      toast.warning('Fill in all fields');
+    }
+  };
 
   return (
     <div className="bg-img-auth w-full h-screen bg-cover md:bg-center">
@@ -16,13 +31,14 @@ const Register = () => {
           <span className="text-[lg] text-center font-light tracking-wide">
             👋 Hello there! Sign up and rent your vacations
           </span>
-          <form className="mt-4 flex flex-col items-center gap-5">
+          <form className="mt-4 flex flex-col items-center gap-5" onSubmit={handleSignup}>
             {/* username */}
             <input
               type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               placeholder="username"
               className="w-80 h-9 border-2 border-orange-400 bg-white/20 outline-none rounded-2xl px-3 placeholder:text-slate-700"
-              required
             />
             {/* image */}
             <div className="w-80 h-10 flex border-2 border-dashed border-orange-400 bg-white/20 rounded-2xl px-3">
@@ -32,13 +48,14 @@ const Register = () => {
                 onChange={({ target: { files } }) => {
                   // eslint-disable-next-line no-unused-expressions
                   files[0] && setFileName(files[0].name);
+                  // converting the image to URL
                   if (files) {
-                    setImage(URL.createObjectURL(files[0]));
+                    const imageUrl = URL.createObjectURL(files[0]);
+                    setImage(imageUrl);
                   }
                 }}
                 className="input-field"
                 hidden
-                required
               />
               {image ? (
                 <div className="flex items-center justify-between w-full px-4">
@@ -55,7 +72,11 @@ const Register = () => {
                   />
                 </div>
               ) : (
-                <div className="flex items-center gap-2 w-full cursor-pointer" onClick={() => document.querySelector('.input-field').click()}>
+                <div
+                  aria-hidden="true"
+                  className="flex items-center gap-2 w-full cursor-pointer"
+                  onClick={() => document.querySelector('.input-field').click()}
+                >
                   <MdCloudUpload className="text-orange-400" size={25} />
                   <span className="text-[13px]">Upload your profile photo</span>
                 </div>
@@ -64,16 +85,18 @@ const Register = () => {
             {/* email address */}
             <input
               type="text"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="email address"
               className="w-80 h-9 border-2 border-orange-400 bg-white/20 outline-none rounded-2xl px-3 placeholder:text-slate-700"
-              required
             />
             {/* password */}
             <input
               type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               placeholder="password"
               className="w-80 h-9 border-2 border-orange-400 bg-white/20 outline-none rounded-2xl px-3 placeholder:text-slate-700"
-              required
             />
             <button
               type="submit"

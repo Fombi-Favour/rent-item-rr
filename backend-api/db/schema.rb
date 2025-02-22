@@ -10,14 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_16_122440) do
+ActiveRecord::Schema[8.0].define(version: 2024_12_06_023003) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension "pg_catalog.plpgsql"
 
   create_table "reservations", force: :cascade do |t|
     t.date "check_in_date"
     t.date "check_out_date"
     t.integer "guest_number"
+    t.decimal "total_price"
     t.bigint "user_id"
     t.bigint "residency_id"
     t.datetime "created_at", null: false
@@ -39,20 +40,30 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_16_122440) do
     t.index ["user_id"], name: "index_residencies_on_user_id"
   end
 
+  create_table "residency_reviews", force: :cascade do |t|
+    t.string "content"
+    t.integer "rating"
+    t.bigint "residency_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["residency_id"], name: "index_residency_reviews_on_residency_id"
+    t.index ["user_id"], name: "index_residency_reviews_on_user_id"
+  end
+
   create_table "reviews", force: :cascade do |t|
     t.decimal "rating"
     t.string "comment_text"
     t.bigint "user_id"
-    t.bigint "residency_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["residency_id"], name: "index_reviews_on_residency_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
+    t.string "image_url"
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -61,6 +72,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_16_122440) do
   add_foreign_key "reservations", "residencies"
   add_foreign_key "reservations", "users"
   add_foreign_key "residencies", "users"
-  add_foreign_key "reviews", "residencies"
+  add_foreign_key "residency_reviews", "residencies"
+  add_foreign_key "residency_reviews", "users"
   add_foreign_key "reviews", "users"
 end

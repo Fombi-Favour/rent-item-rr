@@ -27,7 +27,7 @@ class Api::ResidenciesController < ApplicationController
 
     if @residency.destroy
       @residency.reservations.destroy_all
-      @residency.reviews.destroy_all
+      @residency.residency_reviews.destroy_all
       render json: { message: 'Residency successfully deleted' }
     else
       render json: @residency.errors, status: :unprocessable_entity
