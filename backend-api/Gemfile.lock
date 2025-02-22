@@ -169,6 +169,10 @@ GEM
     parser (3.3.5.0)
       ast (~> 2.4.1)
       racc
+<<<<<<< Updated upstream
+=======
+    pg (1.5.9)
+>>>>>>> Stashed changes
     pg (1.5.9-x64-mingw-ucrt)
     psych (5.1.2)
       stringio
@@ -321,8 +325,13 @@ DEPENDENCIES
   jbuilder
   jsonapi-serializer
   jwt
+<<<<<<< Updated upstream
   pg (~> 1.5)
   puma (~> 6.5)
+=======
+  pg (~> 1.5, >= 1.5.9)
+  puma (>= 5.0)
+>>>>>>> Stashed changes
   rack-cors
   rails (~> 8.0)
   rails-controller-testing
@@ -336,7 +345,11 @@ DEPENDENCIES
   web-console
 
 RUBY VERSION
+<<<<<<< Updated upstream
    ruby 3.3.4p94
+=======
+   ruby 3.3.6p108
+>>>>>>> Stashed changes
 
 BUNDLED WITH
    2.5.6
