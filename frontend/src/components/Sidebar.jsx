@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import clsx from 'clsx';
 import { FaBars, FaTimes, FaUser } from 'react-icons/fa';
+import { MdExitToApp } from 'react-icons/md';
 import navMenu from '../utils/nav-menu';
 import Logo from '../assets/logo.jpg';
 
@@ -14,7 +15,7 @@ const Sidebar = () => {
         {/* logo */}
         <div className="p-3 flex md:flex-col items-center justify-between">
           <NavLink to="/">
-            <img src={Logo} alt="logo" className="w-20 md:w-48 rounded-xl shadow-md" />
+            <img src={Logo} alt="logo" className="w-16 md:w-40 rounded-xl shadow-md" />
           </NavLink>
           <div className="flex items-center gap-2 md:mt-7 md:-mb-9 shadow-sm shadow-black/20 p-1 rounded-lg">
             <FaUser className="text-4xl text-white bg-orange-400 border-2 rounded-full border-transparent p-1" />
@@ -37,6 +38,16 @@ const Sidebar = () => {
               {menu.name}
             </NavLink>
           ))}
+          {/* logout button */}
+          <button
+            type="button"
+            className="bg-red-500 w-fit px-8 rounded-lg flex items-center gap-1 text-white"
+          >
+            <MdExitToApp size={20} />
+            <span className="uppercase font-semibold text-lg tracking-wider">
+              logout
+            </span>
+          </button>
           {/* footer */}
           <footer className="flex items-center absolute bottom-6 md:ml-1 lg:ml-3">
             <span className="md:text-[11px] lg:text-[12px]">
@@ -66,9 +77,10 @@ const Sidebar = () => {
             ))}
             <button
               type="button"
-              className="bg-red-500 w-fit px-8 rounded-lg mt-3 ml-6"
+              className="bg-red-500 w-fit mt-2 ml-6 px-8 rounded-lg text-white flex items-center gap-1"
             >
-              <span className="uppercase font-semibold text-lg text-white tracking-wider">
+              <MdExitToApp size={20} />
+              <span className="uppercase font-semibold text-lg tracking-wider">
                 logout
               </span>
             </button>
