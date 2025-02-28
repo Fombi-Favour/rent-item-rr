@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
+import { v4 as uuid } from 'uuid';
 import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { MdCloudUpload, MdDelete } from 'react-icons/md';
 import { toast } from 'react-toastify';
+import { signupUser } from '../redux/user/userSlice';
 
 const Register = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const [name, setName] = useState('');
@@ -12,10 +16,19 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSignup = (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
 
+    const addUser = {
+      id: uuid(),
+      name,
+      image_url: image,
+      email,
+      password,
+    };
+
     if (name.length !== 0 && image !== '' && email.length !== 0 && password.length !== 0) {
+      await dispatch(signupUser(addUser));
       navigate('/residency');
       toast.success(`Hello ${name}`);
     } else {
