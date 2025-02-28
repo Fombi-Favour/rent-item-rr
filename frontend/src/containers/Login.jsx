@@ -1,19 +1,28 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { signinUser } from '../redux/user/userSlice';
 
 const Login = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
 
+    const loginUser = {
+      email,
+      password,
+    };
+
     if (email.length !== 0 && password.length !== 0) {
+      await dispatch(signinUser(loginUser));
       navigate('/residency');
-      toast.success('Welcome back username');
+      toast.success('Welcome back');
     } else {
       toast.warning('Please enter your email address and password');
     }
